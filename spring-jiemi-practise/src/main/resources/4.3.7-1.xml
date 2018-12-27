@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="newsBean" class="com.zhukai.practise.bean.FXNewsBean" scope="prototype"/>
+
+
+    <!--每次注入的newBean对象为同一对象-->
+    <!--<bean id="mockPersister" class="com.zhukai.practise.bean.MockNewsPersister">-->
+        <!--<property name="newsBean">-->
+            <!--<ref bean="newsBean"/>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--每次注入新的对象-->
+    <!--<bean id="mockPersister" class="com.zhukai.practise.bean.MockNewsPersister">-->
+        <!--<lookup-method name="getNewsBean" bean="newsBean"/>-->
+    <!--</bean>-->
+
+    <!--通过实现BeanFactoryAware接口实现新的对象的注入-->
+    <bean id="mockPersister" class="com.zhukai.practise.bean.MockNewsPersister">
+    </bean>
+</beans>

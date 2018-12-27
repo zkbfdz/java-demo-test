@@ -10,17 +10,30 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>design-pattern-demo</module>
+        <module>spring-jiemi-practise</module>
+        <module>jfinal-demo</module>
+        <module>spring-demo</module>
+        <module>practise-module</module>
+        <module>rabbitmq</module>
+        <module>netty-demo</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.12.RELEASE</version>
+        <version>2.0.3.RELEASE</version>
         <relativePath/>
     </parent>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -70,6 +83,8 @@
             <artifactId>guava</artifactId>
             <version>24.1-jre</version>
         </dependency>
+
+        <!---->
     </dependencies>
 
     <build>
